@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+#div {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+}
+
+#div::before {
+  content: " ";
+  display: block;
+  position: absolute;
+}
+#div::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/*手机适配*/
+@media (max-width: 500px) {
+  #cv {
+    height: 50vh;
+    overflow: auto;
+  }
+
+  #divWrapper {
+    height: 50vh;
+  }
+
+  #div {
+    position: relative;
+    top: 1vh;
+  }
+}
